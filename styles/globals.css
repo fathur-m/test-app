@@ -1,3 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply bg-ctm-black;
+    @apply text-ctm-white;
+  }
+  * {
+    @apply box-border;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+::-webkit-scrollbar {
+  background: transparent;
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-ctm-blue;
+  @apply rounded-full;
+}
+.hidescroll::-webkit-scrollbar {
+  display: none;
+}
+.padtop {
+  padding-top: 65px;
+}
+.mincalc {
+  min-height: calc(100vh - 65px);
+}
+.divider {
+  width: 100%;
+  height: 10px;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.overlay-gradient {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), #100f0f);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
